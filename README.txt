@@ -1,41 +1,43 @@
-# Titanic Survival Prediction
+# Titanic Survival Prediction Using Machine Learning
 
-This project predicts the probability of survival for Titanic passengers using machine learning (scikit-learn, pandas, etc).  
-It is a mini-project for learning basic data analysis, feature engineering, and classification modeling.
+## Overview
 
-## Project Structure
+This repository (`project_titanic`) predicts Titanic passenger survival using state-of-the-art machine learning models. We analyze the historic Titanic dataset to uncover key factors influencing survival, and build a model achieving **81% accuracy**.
 
-- `notebook.ipynb`: Main Jupyter notebook with all code and documentation.
-- `train.csv`: Titanic dataset (from [Kaggle](https://www.kaggle.com/c/titanic/data)).
-- `requirements.txt`: List of Python dependencies.
+## Libraries Used
 
-## How to Run
+- **pandas**: Data manipulation and analysis.
+- **numpy**: Numerical operations.
+- **seaborn** & **matplotlib.pyplot**: Data visualization.
 
-1. Clone the repo:
-   ```
-   git clone https://github.com/mohamedazizabbes/project_titanic.git
-   cd project_titanic
-   ```
+## Project Workflow
 
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+1. **Data Loading**
+   - Load Titanic training and test data from CSV files using pandas.
 
-3. Start Jupyter Notebook:
-   ```
-   jupyter notebook notebook.ipynb
-   ```
-   Run the cells in order.
+2. **Exploratory Data Analysis (EDA)**
+   - Visualize age, fare, and family size distributions.
+   - Analyze relationships and correlations among features.
 
-## Example Usage
+3. **Data Cleaning & Feature Engineering**
+   - Impute missing values.
+   - Remove irrelevant columns (PassengerId, Cabin, Name, Ticket).
+   - Create new features to enhance prediction.
 
-After training, use:
-```python
-predict_survival(pclass=1, sex=0, age=60, fare=80, family_size=1, is_child=0)  # Example: 1st class female, 60 years old
-```
-Returns probability of survival (e.g., 0.92).
+4. **Model Selection & Testing**
+   - Evaluate models: Decision Tree, Random Forest, ExtraTrees, Logistic Regression, LGBM, XGBoost.
+   - Select the best model with **81% validation accuracy**.
+
+5. **Results & Submission**
+   - Predict survival on the test dataset.
+   - Generate a CSV submission file for external evaluation.
+
+## Conclusion
+
+Our model demonstrates effective prediction of Titanic passenger survival, providing insights into historical disaster outcomes and the practical use of machine learning.
 
 ## Authors
 
-Group project by Mohamed Aziz Abbes, Anas Abd Elmalek Cherif and Ahmed Ben Salah 
+- Mohamed Aziz Abbes
+- Anas Abd Elmalek Cherif
+- Ahmed Ben Salah
